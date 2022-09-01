@@ -66,3 +66,23 @@ body {
         transform: none;
     }
 }
+
+@media (max-device-width:500px){
+    #heartbeat{
+        width: 100px;
+        height: 100px;
+        margin: 75px;
+    }
+    #square{
+        height: 100px;
+        width: 100px;
+    }
+    #left{
+        height: 100px;
+        width: 100px;
+    }
+    #right{
+        height: 100px;
+        width: 100px;
+    }
+}

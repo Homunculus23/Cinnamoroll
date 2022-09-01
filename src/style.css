@@ -17,6 +17,12 @@ body > canvas div img{
     display: flex;
 }
 
+.background {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+}
+
 .icon {
     width: 4em; 
     height: 4em;
@@ -36,7 +42,7 @@ body > canvas div img{
     position: absolute;
     border-radius: 50%;
     border: none;
-    box-shadow: 0 0 15px blue;
+    box-shadow: 0 0 15px #006EB4;
     z-index: 2;
     width: 64px;
     height: 64px;
@@ -54,9 +60,6 @@ body > canvas div img{
     box-shadow: 0px -5px 15px 5px #006EB4;
 }
 
-.background {
-    position: absolute;
-}
 
 .wrapper {
     width: 324px;
