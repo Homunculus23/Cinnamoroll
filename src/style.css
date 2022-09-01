@@ -107,15 +107,15 @@ body > canvas div img{
         left:0px;
     }
     30%,60%,70%{
-        top: 30;
+        top: 15px;
         left: 25px;
     }
     40%{
-        top: 30;
+        top: 15px;
         left: 25px;
     }
     50%{
-        top: 30;
+        top: 15px;
         left: 0px;
     }
     80%,90%{
