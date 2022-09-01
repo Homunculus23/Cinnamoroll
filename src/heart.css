@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#heartbeat{
+    width: 200px;
+    height: 200px;
+    margin: 150px;
+    display: flex;
+    position: relative;
+    animation: xxx 1.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+#square{
+    height: 200px;
+    width: 200px;
+    background: red;
+    transform: rotateZ(45deg);
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+}
+
+#left{
+    height: 200px;
+    width: 200px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 33.3%;
+    bottom: 33.3%;
+}
+
+#right{
+    height: 200px;
+    width: 200px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 33.3%;
+    bottom: 33.3%;
+}
+
+@keyframes xxx {
+    0% {
+        transform: none;
+    }
+    22.22% {
+        transform: scale(1.5);
+    }
+    66.66% {
+        transform: none;;
+    }
+    100% {
+        transform: none;
+    }
+}

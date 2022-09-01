@@ -1,0 +1,215 @@
+/*css reset*/
+* {box-sizing: border-box;margin: 0;padding: 0;}
+ul, ol { list-style: none; }
+a {color: inherit; text-decoration: none;}
+/*css set*/
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+}
+
+body > canvas div img{
+    display: flex;
+}
+
+.icon {
+    width: 4em; 
+    height: 4em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.audioDiv{
+    position: absolute;
+    margin-left: 260px;
+    width: 64px;
+    height: 64px;
+}
+
+.audioSwitch{
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 15px blue;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.container {
+    width: 942px;
+    height: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px -5px 15px 5px #006EB4;
+}
+
+.background {
+    position: absolute;
+}
+
+.wrapper {
+    width: 324px;
+    height: 465px;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+}
+
+.wrapper > div {
+    margin-top: 100px;
+}
+
+.eye {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -23px;
+}
+
+.eye::before {
+    content: "";
+    width: 26px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #006EB4;
+    background: #006EB4;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    animation:eyeMove 2s infinite;
+}
+
+.eye.left {
+    transform: translateX(-90px);
+}
+
+.eye.right {
+    transform: translateX(90px);
+}
+
+@keyframes eyeMove{
+    0%,100%{
+        top:32px;
+        left:0px;
+    }
+    30%,60%,70%{
+        top: 30;
+        left: 25px;
+    }
+    40%{
+        top: 30;
+        left: 25px;
+    }
+    50%{
+        top: 30;
+        left: 0px;
+    }
+    80%,90%{
+        top: 37px;
+        left: 15px;
+    }
+}
+
+.face {
+    position: absolute;
+    width: 72px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F7C8DC;
+    top: 85px;
+    left: 50%;
+    margin-left: -52px;
+    animation: cheekMove 2s infinite;
+}
+
+.face.left {
+    transform: translateX(-90px);
+}
+
+.face.right {
+    transform: translateX(120px);
+}
+
+@keyframes cheekMove{
+    0%,46%,54%,100%{
+        width: 72px;
+        height: 32px;
+        top: 85px;
+    }
+    50%{
+        width: 72px;
+        height: 30px;
+        top: 90px;
+    }
+}
+
+.mouth {
+    height: 37.5px;
+    width: 37.5px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    margin-left: -18.75px;
+}
+
+.mouth_main {
+    position: absolute;
+    left:50%;
+    top: 3px ;
+    width: 32.5px;
+    height: 35px;
+    background: #F7C8DC;
+    border: 4px solid #006EB4;
+    border-bottom-left-radius: 140px 295px;
+    border-bottom-right-radius: 140px 295px;
+    overflow: hidden;
+    margin-left: -16.25px;
+    animation: mouthMove 3s infinite;
+}
+
+@keyframes mouthMove {
+    0%,46%,54%,100%{
+        height: 50px;
+    }
+    50%{
+        height: 10px;
+    }
+}
+
+.mouth:after, .mouth:before {
+    content: '';
+    width: 18.75px;
+    height: 9.5px;
+    background: #fff;
+    border-bottom: 3px solid #006EB4;
+    position: absolute;
+    z-index: 3;
+}
+
+.mouth:after {
+    border-left: 3px solid #006EB4;
+    border-bottom-left-radius: 85px 45px;
+    left: -3px;
+    transform: rotate(-30deg);
+}
+
+.mouth:before {
+    border-right: 3px solid #006EB4;
+    border-bottom-right-radius: 85px 45px;
+    right: -3px;
+    transform: rotate(30deg);
+}
